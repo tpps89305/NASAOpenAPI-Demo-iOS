@@ -7,11 +7,11 @@ import Foundation
 // MARK: - ApodElement
 struct ApodElement: Codable {
     let date, explanation: String
-    let hdurl: String
-    let mediaType: MediaType
-    let serviceVersion: ServiceVersion
+    let hdurl: String? // Add ? to avoid key not found error.
+    let mediaType: String // Change to String to avoid DecodingError.
+    let serviceVersion: String
     let title: String
-    let url: String
+    let url: String?
     let copyright: String?
 
     enum CodingKeys: String, CodingKey {
@@ -20,14 +20,6 @@ struct ApodElement: Codable {
         case serviceVersion = "service_version"
         case title, url, copyright
     }
-}
-
-enum MediaType: String, Codable {
-    case image = "image"
-}
-
-enum ServiceVersion: String, Codable {
-    case v1 = "v1"
 }
 
 /// APOD = Astronomy Picture of the Day
@@ -50,22 +42,3 @@ func APODJSONEncoder() -> JSONEncoder {
     }
     return encoder
 }
-
-// MARK: - URLSession response handlers
-
-//extension URLSession {
-//    fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-//        self.dataTask(with: url) { data, response, error in
-//            guard let data = data, error == nil else {
-//                completionHandler(nil, response, error)
-//                return
-//            }
-//            print("Apod origin data = \(String(data: data, encoding: String.Encoding.utf8) ?? "(no result)")")
-//            completionHandler(try? APODJSONDecoder().decode(T.self, from: data), response, nil)
-//        }
-//    }
-//
-//    func apodTask(with url: URL, completionHandler: @escaping (Apod?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-//        self.codableTask(with: url, completionHandler: completionHandler)
-//    }
-//}

@@ -16,7 +16,7 @@ class SpaceCell: UICollectionViewCell {
 
     func setup(viewModel: SpaceCellViewModel) {
         let apodElement = viewModel.apodElement
-        imageSpace.loadUrl(url: apodElement.url) {
+        imageSpace.loadUrl(url: apodElement.url ?? "") {
             self.setNeedsLayout()
         }
         labelSpace.text = apodElement.title

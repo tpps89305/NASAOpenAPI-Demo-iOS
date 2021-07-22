@@ -20,17 +20,15 @@ class SecondVCViewModel: NSObject {
                 print("Error when download data")
                 return
             }
-//            print("Apod origin data = \(String(data: data, encoding: String.Encoding.utf8) ?? "(no result)")")
-            let apod = try? JSONDecoder().decode(Apod.self, from: data)
-
-            // Unexpected decode issue
-            guard apod != nil else {
-                print("Cannot get Data, try again......")
-                self.getAPODData()
-                return
-            }
+            print("Apod origin data = \(String(data: data, encoding: String.Encoding.utf8) ?? "(no result)")")
+        do {
+            let apod = try APODJSONDecoder().decode(Apod.self, from: data)
             print("Success to get data!")
-            self.convertToViewModel(array: apod!)
+            self.convertToViewModel(array: apod)
+        } catch {
+            print("Cannot get Data, error message: \(error)")
+        }
+
         }
         task.resume()
     }

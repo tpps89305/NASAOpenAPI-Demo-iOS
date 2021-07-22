@@ -9,6 +9,11 @@ var imageCache = NSCache<AnyObject, AnyObject>()
 extension UIImageView {
 
     func loadUrl(url: String, onLoadingCompleted loadingCompleted: @escaping () -> Void) {
+
+        if url == "" {
+            return
+        }
+
         if let image = imageCache.object(forKey: url as NSString) as? UIImage {
             self.image = image
             loadingCompleted()

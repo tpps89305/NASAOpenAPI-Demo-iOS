@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		3EDEB3447304E90842CA7489 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEBA6FFD6519BF7F77224B /* APOD.swift */; };
 		3EDEB3B65BB843D8C4084E1B /* SecondVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB278583273E35936C5B3 /* SecondVCViewModel.swift */; };
+		3EDEB50D74471F3B2EC52676 /* ThirdVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB47CD21CFB2201F29AA8 /* ThirdVCViewModel.swift */; };
 		3EDEB69801BD54A77E24C3E9 /* SpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB3408A45CA2A4AE3F863 /* SpaceCell.swift */; };
 		3EDEB8428A7526215E0B91DB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB99930E9384DC05B313D /* Extensions.swift */; };
 		3EDEB8863AD0ECC64FF0CF55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEB0612451F1DC9B8DFAFE /* Main.storyboard */; };
 		3EDEB923575F86ED53FFFD12 /* SpaceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEBEC57DB7AD819DC10838 /* SpaceCellViewModel.swift */; };
 		3EDEB9D814C81CBA2873E0E8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB6793D91EADD30128EB2 /* SecondViewController.swift */; };
 		3EDEBD07273C2FFCF2059AC6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEB929DBD48930116D8BD1 /* FirstViewController.swift */; };
+		F648563426A9678500E6060A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648563326A9678500E6060A /* ThirdViewController.swift */; };
 		F692CC7726A8195600990FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692CC7626A8195600990FF7 /* AppDelegate.swift */; };
 		F692CC7926A8195600990FF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692CC7826A8195600990FF7 /* SceneDelegate.swift */; };
 		F692CC8026A8195D00990FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F692CC7F26A8195D00990FF7 /* Assets.xcassets */; };
@@ -25,11 +27,13 @@
 		3EDEB0612451F1DC9B8DFAFE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3EDEB278583273E35936C5B3 /* SecondVCViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVCViewModel.swift; sourceTree = "<group>"; };
 		3EDEB3408A45CA2A4AE3F863 /* SpaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceCell.swift; sourceTree = "<group>"; };
+		3EDEB47CD21CFB2201F29AA8 /* ThirdVCViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdVCViewModel.swift; sourceTree = "<group>"; };
 		3EDEB6793D91EADD30128EB2 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3EDEB929DBD48930116D8BD1 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3EDEB99930E9384DC05B313D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3EDEBA6FFD6519BF7F77224B /* APOD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		3EDEBEC57DB7AD819DC10838 /* SpaceCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceCellViewModel.swift; sourceTree = "<group>"; };
+		F648563326A9678500E6060A /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F692CC7326A8195600990FF7 /* NASAOpenAPIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAOpenAPIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F692CC7626A8195600990FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F692CC7826A8195600990FF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			children = (
 				3EDEB278583273E35936C5B3 /* SecondVCViewModel.swift */,
 				3EDEBEC57DB7AD819DC10838 /* SpaceCellViewModel.swift */,
+				3EDEB47CD21CFB2201F29AA8 /* ThirdVCViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 				3EDEB0612451F1DC9B8DFAFE /* Main.storyboard */,
 				3EDEB929DBD48930116D8BD1 /* FirstViewController.swift */,
 				3EDEB6793D91EADD30128EB2 /* SecondViewController.swift */,
+				F648563326A9678500E6060A /* ThirdViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			files = (
 				F692CC7726A8195600990FF7 /* AppDelegate.swift in Sources */,
 				F692CC7926A8195600990FF7 /* SceneDelegate.swift in Sources */,
+				F648563426A9678500E6060A /* ThirdViewController.swift in Sources */,
 				3EDEB69801BD54A77E24C3E9 /* SpaceCell.swift in Sources */,
 				3EDEBD07273C2FFCF2059AC6 /* FirstViewController.swift in Sources */,
 				3EDEB9D814C81CBA2873E0E8 /* SecondViewController.swift in Sources */,
@@ -188,6 +195,7 @@
 				3EDEB3447304E90842CA7489 /* APOD.swift in Sources */,
 				3EDEB923575F86ED53FFFD12 /* SpaceCellViewModel.swift in Sources */,
 				3EDEB8428A7526215E0B91DB /* Extensions.swift in Sources */,
+				3EDEB50D74471F3B2EC52676 /* ThirdVCViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
