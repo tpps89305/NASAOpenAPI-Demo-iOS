@@ -21,8 +21,8 @@ extension UIImageView {
                 imageCache.setObject(image, forKey: url as NSString)
                 DispatchQueue.main.async() { [weak self] in
                     self?.image = image
+                    loadingCompleted()
                 }
-                loadingCompleted()
             } else {
                 print("Data is nil. I don't know what to do :(")
             }

@@ -11,6 +11,7 @@ class SecondViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureCellSize()
         bindViewModel()
         viewModel.getAPODData()
     }
@@ -23,6 +24,18 @@ class SecondViewController: UICollectionViewController {
         }
     }
 
+    func configureCellSize() {
+        let itemSpace: CGFloat = 3
+        let columnCount: CGFloat = 4
+        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let width = floor((collectionView.bounds.width - itemSpace * (columnCount-1)) / columnCount)
+
+        flowLayout?.itemSize = CGSize(width: width, height: width)
+        flowLayout?.estimatedItemSize = .zero
+        flowLayout?.minimumInteritemSpacing = itemSpace
+        flowLayout?.minimumLineSpacing = itemSpace
+    }
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.spaceCellViewModels.count
     }
@@ -32,12 +45,5 @@ class SecondViewController: UICollectionViewController {
         cell.setup(viewModel: viewModel.spaceCellViewModels[indexPath.row])
         return cell
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cellsAcross: CGFloat = 3
-//        let spaceBetweenCells: CGFloat = 10
-//        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-//        return CGSize(width: dim, height: dim)
-//    }
 
 }

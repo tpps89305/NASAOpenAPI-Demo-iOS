@@ -21,7 +21,15 @@ class SecondVCViewModel: NSObject {
                 return
             }
 //            print("Apod origin data = \(String(data: data, encoding: String.Encoding.utf8) ?? "(no result)")")
-            let apod = try? APODJSONDecoder().decode(Apod.self, from: data)
+            let apod = try? JSONDecoder().decode(Apod.self, from: data)
+
+            // Unexpected decode issue
+            guard apod != nil else {
+                print("Cannot get Data, try again......")
+                self.getAPODData()
+                return
+            }
+            print("Success to get data!")
             self.convertToViewModel(array: apod!)
         }
         task.resume()

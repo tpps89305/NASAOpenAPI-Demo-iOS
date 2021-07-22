@@ -12,10 +12,6 @@ class SpaceCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        // let width = floor((collectionView.bounds.width - itemSpace * (columnCount-1)) / columnCount)
-        let width = floor((UIScreen.main.bounds.width - 3 * 3) / 4)
-        widthImageView.constant = width
     }
 
     func setup(viewModel: SpaceCellViewModel) {
