@@ -51,28 +51,55 @@
             </objects>
             <point key="canvasLocation" x="1124.6376811594205" y="164.73214285714286"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="om1-Y2-nHY">
             <objects>
-                <collectionViewController id="IZK-vq-Mbe" sceneMemberID="viewController">
+                <collectionViewController id="IZK-vq-Mbe" customClass="SecondViewController" customModule="NASAOpenAPIDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gvo-Oi-kzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3n7-kq-XR5">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="3n7-kq-XR5">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Uqi-Va-raU">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Uqi-Va-raU" customClass="SpaceCell" customModule="NASAOpenAPIDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kdq-oL-5Jf">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P0K-y4-lxK">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7P7-kt-MGa">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="7P7-kt-MGa" secondAttribute="height" multiplier="1:1" id="Lv6-fs-9xB"/>
+                                                <constraint firstAttribute="width" constant="128" id="adg-At-5Gg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO1-nT-J9B">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7P7-kt-MGa" firstAttribute="leading" secondItem="P0K-y4-lxK" secondAttribute="leading" id="B8h-vz-CPb"/>
+                                        <constraint firstAttribute="trailing" secondItem="7P7-kt-MGa" secondAttribute="trailing" id="CNf-N8-BR0"/>
+                                        <constraint firstAttribute="bottom" secondItem="7P7-kt-MGa" secondAttribute="bottom" id="OV7-TW-cVi"/>
+                                        <constraint firstItem="7P7-kt-MGa" firstAttribute="top" secondItem="P0K-y4-lxK" secondAttribute="top" id="esX-YX-OIp"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageSpace" destination="7P7-kt-MGa" id="JjD-zY-rd6"/>
+                                    <outlet property="labelSpace" destination="pO1-nT-J9B" id="niX-PP-Q6N"/>
+                                    <outlet property="widthImageView" destination="adg-At-5Gg" id="H3P-Uv-RC0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -84,7 +111,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhy-Pm-eND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="165"/>
+            <point key="canvasLocation" x="1963.7681159420292" y="164.73214285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gAW-Yu-lnw">
