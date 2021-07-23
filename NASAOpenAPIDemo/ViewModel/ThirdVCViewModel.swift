@@ -20,7 +20,7 @@ class ThirdVCViewModel: NSObject {
         let originalDate = dateFormatter.date(from: original)
 
         let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateFormat = "YYYY MMM DD"
+        dateFormatter2.dateFormat = "YYYY MMM. DD"
         return dateFormatter2.string(from: originalDate!)
     }
 
