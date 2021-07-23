@@ -22,9 +22,11 @@ class ThirdViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         labelDate.text = viewModel.parseDate(original: apodElement?.date ?? "")
-        imageHD.loadUrl(url: apodElement?.url ?? "", onLoadingCompleted: {
-            // Do nothing
-        })
+        if apodElement!.mediaType == "image" {
+            imageHD.loadUrl(url: apodElement?.url ?? "", onLoadingCompleted: {
+                // Do nothing
+            })
+        }
         labelTitle.text = apodElement?.title
         labelDesc.text = apodElement?.explanation
     }
