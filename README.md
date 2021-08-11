@@ -1,6 +1,12 @@
 # NASA Open API Demo
 This is an iOS APP Demo which show [Astronomy Picture of the Day (APOD)](https://api.nasa.gov/).
 
+# Screenshot
+
+![screen2](readme/screen2.png)
+
+![screen3](readme/screen3.png)
+
 # Technical Specifications
 - Language: Swift 5
 - IDE: AppCode 2021.1 with Xcode 12.4
